@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // Velocidade de movimento do jogador.
-
+    public bool temChave = false;
     private Rigidbody2D rb; // Referência ao Rigidbody2D do jogador.
 
     // Método chamado quando o componente é inicializado.
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Obtém a referência ao Rigidbody2D.
+        temChave = false;
     }
 
     // Método chamado a cada quadro.
